@@ -1,0 +1,28 @@
+.Board{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+
+}
+.Board>div>img{
+    max-width: 85%;
+    max-height: 85%;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+}
+.Board.Cell{
+    z-index: -1;
+    aspect-ratio: 1 / 1;
+
+}
+.Board>.Cell:nth-child(even of .FirstRow),
+    .Board > .Cell:nth-child(odd of .SecondRow) {
+        background-color: #761212;
+    }
+.Board>.Cell:nth-child(odd of .FirstRow),
+.Board > .Cell:nth-child(even of .SecondRow) {
+    background-color: #0c0c0c;
+}
